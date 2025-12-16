@@ -22,7 +22,8 @@ export const {
   events: {
     async linkAccount({ user }) {
       console.log('LINKING ACCOUNT HERE::')
-      const dateOfBirth = c().get('dateOfBirth')
+      const cookieStore = await c()
+      const dateOfBirth = cookieStore.get('dateOfBirth')
       const email = user?.email
       const username = !!email
         ? generateFromEmail(email, 3)

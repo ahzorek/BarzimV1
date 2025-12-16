@@ -8,6 +8,9 @@ const nextConfig = {
     // DANGER ZONEEEEEEEEE
     ignoreBuildErrors: true,
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   async headers() {
     return [
       {

@@ -11,7 +11,7 @@ import {
 
 const { auth } = NextAuth(authConfig)
 
-export default auth((req) => {
+export default auth(async (req) => {
   //console.log('REQ Auth Passando pelo Middleware contem session ::::', req.auth)
 
   const { nextUrl } = req
@@ -24,7 +24,8 @@ export default auth((req) => {
   const isRestricaoRoute = nextUrl.pathname == '/restricao-idade'
   const isOBarzimRedirect = nextUrl.pathname == '/obarzim'
 
-  const dob = cookies().get('dateOfBirth')
+  const cookieStore = await cookies()
+  const dob = cookieStore.get('dateOfBirth')
   const isDob = !!dob
 
   if (isApiAuthRoute) {

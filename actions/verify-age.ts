@@ -48,7 +48,8 @@ export default async function verifyAge(data: AgeVerifFormData) {
   if (age < 18) {
     redirect('/restricao-idade')
   } else {
-    cookies().set('dateOfBirth', isoDateOfBirth, {
+    const cookieStore = await cookies()
+    cookieStore.set('dateOfBirth', isoDateOfBirth, {
       httpOnly: true,
       expires: Date.now() + 60 * 60 * 1000,
     })

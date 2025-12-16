@@ -14,7 +14,7 @@ cloudinary.config({
  * @param {string | undefined} folder - (Opcional) O nome da pasta onde a imagem será armazenada no Cloudinary. Se não fornecido, a imagem será armazenada na pasta 'review_images' por padrão.
  * @returns {Promise<CloudinaryResponse>} Uma promessa que resolve com a resposta do Cloudinary após o envio da imagem.
  */
-export const uploadImageToCloudinary = (
+export const uploadImageToCloudinary = async (
   base64String: string,
   folder: string | undefined = 'review_images'
 ): Promise<CloudinaryResponse> => {
@@ -49,7 +49,7 @@ export const uploadImageToCloudinary = (
  * @param {string | undefined} folder - (Opcional) O nome da pasta onde a imagem será armazenada no Cloudinary. Se não fornecido, a imagem será armazenada na pasta 'review_images' por padrão.
  * @returns {Promise<CloudinaryResponse>} Uma promessa que resolve com a resposta do Cloudinary após o envio da imagem.
  */
-export const uploadImageToCloudinary_v2 = (
+export const uploadImageToCloudinary_v2 = async (
   base64String: string,
   folder: string | undefined = 'review_images'
 ): Promise<CloudinaryResponse> => {
