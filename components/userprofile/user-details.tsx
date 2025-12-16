@@ -1,16 +1,16 @@
 'use client'
-import { type User } from '@/data/data'
-import { cn, firstTwoLetters, sanitizeUserLink } from '@/lib/utils'
 import { Avatar, AvatarFallback } from '@radix-ui/react-avatar'
 import React from 'react'
-import AvatarReview from '../avatar/avatar-review/avatar-review'
 import { DevBadge } from '@/components/badges/name-badges/dev-badge/dev-badge'
+import { type User } from '@/data/data'
+import { cn, firstTwoLetters, sanitizeUserLink } from '@/lib/utils'
+import AvatarReview from '../avatar/avatar-review/avatar-review'
 
 export const UserDetails: React.FC<{ user: User }> = ({ user }) => {
   return (
     <div
       className={cn(
-        "grid gap-6 p-6 [grid-template-areas:_'avatar_info-txt'] [grid-template-columns:_auto_2fr]"
+        "grid gap-6 p-6 [grid-template-areas:'avatar_info-txt'] grid-cols-[auto_2fr]"
       )}
     >
       <div className={cn('flex content-center items-center')}>
@@ -31,7 +31,7 @@ export const UserDetails: React.FC<{ user: User }> = ({ user }) => {
           )}
         </Avatar>
       </div>
-      <div className="flex flex-col content-start gap-2 py-4 [grid-area:_info-txt]">
+      <div className="flex flex-col content-start gap-2 py-4 [grid-area:info-txt]">
         <h2 className="inline-flex items-center gap-2 text-xl text-accent-foreground">
           {user.name}
           {user.role === 'ADMIN' && <DevBadge size={20} />}

@@ -1,6 +1,6 @@
-import { Card } from '@/components/ui/card'
 import Image, { type StaticImageData } from 'next/image'
 import Link from 'next/link'
+import { Card } from '@/components/ui/card'
 
 interface CarouselCardProps {
   title: string

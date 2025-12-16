@@ -1,11 +1,11 @@
 'use server'
-import { cervejaSchema } from '@/schemas'
 import {
   createNewCerveja,
   createNewCervejaria,
   createNewTipoCerveja,
 } from '@/data/cervejas'
 import { uploadImageToCloudinary } from '@/lib/image_upload'
+import { cervejaSchema } from '@/schemas'
 
 /**
  * Adiciona uma nova cervejaria.

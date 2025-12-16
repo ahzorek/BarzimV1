@@ -1,13 +1,12 @@
-import { auth } from '@/auth'
-import { notifications } from '@/lib/notifications'
-import { Nav } from '@/components/nav/nav-bar'
-import { BottomMenu } from '@/components/menu/bottom-menu'
-import { SideMenu } from '@/components/menu/side-menu'
-import { Toaster } from '@/components/ui/toaster'
-
 import { Suspense } from 'react'
 import Loading from '@/app/loading'
+import { auth } from '@/auth'
+import { BottomMenu } from '@/components/menu/bottom-menu'
+import { SideMenu } from '@/components/menu/side-menu'
+import { Nav } from '@/components/nav/nav-bar'
+import { Toaster } from '@/components/ui/toaster'
 import { getUsernameById } from '@/data/user'
+import { notifications } from '@/lib/notifications'
 
 export default async function ProtectedLayout({
   children,
@@ -32,7 +31,7 @@ export default async function ProtectedLayout({
         username={user?.username as string}
         userId={session?.user.id as string}
       />
-      <div className="mt-[70px] grid w-full grid-cols-[100%] gap-2 [grid-template-areas:_'main'] md:mx-auto md:min-h-[calc(100svh-70px)] md:max-w-screen-lg md:grid-cols-[1fr_3fr]  md:[grid-template-areas:'menu_main_main_main']">
+      <div className="mt-[70px] grid w-full grid-cols-[100%] gap-2 [grid-template-areas:'main'] md:mx-auto md:min-h-[calc(100svh-70px)] md:max-w-(--breakpoint-lg) md:grid-cols-[1fr_3fr]  md:[grid-template-areas:'menu_main_main_main']">
         <div className="relative hidden md:block md:[grid-area:menu]">
           <SideMenu currUser={user?.username as string} />
         </div>

@@ -1,10 +1,10 @@
+import Link from 'next/link'
+import { redirect } from 'next/navigation'
 import { auth } from '@/auth'
 import { Button } from '@/components/ui/button'
 import BoxReviewAvaliada from '@/components/wrappers/box-review-avaliada/box-review-avaliada'
 import { relUserCerv } from '@/data/avaliacao'
 import { getCervejaNameById } from '@/data/cervejas'
-import Link from 'next/link'
-import { redirect } from 'next/navigation'
 
 const AvaliarCerveja = async ({
   params,

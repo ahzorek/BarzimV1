@@ -35,7 +35,7 @@ const nextConfig = {
           {
             key: 'Access-Control-Expose-Headers',
             value: 'Content-Range',
-          }
+          },
         ],
       },
     ]
@@ -58,34 +58,34 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'lh3.googleusercontent.com',
         port: '',
-        pathname: '/**'
+        pathname: '/**',
       },
       {
         protocol: 'https',
         hostname: 'avatars.githubusercontent.com',
         port: '',
-        pathname: '/**'
+        pathname: '/**',
       },
       {
         protocol: 'https',
         hostname: 'cdn.discordapp.com',
         port: '',
-        pathname: '/**'
+        pathname: '/**',
       },
       {
         protocol: 'https',
         hostname: 'media.licdn.com',
         port: '',
-        pathname: '/**'
+        pathname: '/**',
       },
       {
         protocol: 'https',
         hostname: 't4.ftcdn.net',
         port: '',
-        pathname: '/**'
+        pathname: '/**',
       },
     ],
-  }
+  },
 }
 
 module.exports = nextConfig

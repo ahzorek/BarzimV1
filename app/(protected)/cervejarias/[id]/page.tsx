@@ -1,8 +1,7 @@
 import SectionTitle from '@/components/dashboard/title-sections/title-section'
-import { getCervejasByCervejaria } from '@/data/cervejas'
-
 import ListaDeCervejas from '@/components/lists/lista-cervejas'
-import {WrapperDefaultPadding} from '@/components/wrappers/wrapper-default-padding'
+import { WrapperDefaultPadding } from '@/components/wrappers/wrapper-default-padding'
+import { getCervejasByCervejaria } from '@/data/cervejas'
 
 export default async function CervejariaByIdPage({
   params,
@@ -11,7 +10,6 @@ export default async function CervejariaByIdPage({
 }) {
   const cervejariaData = await getCervejasByCervejaria(params.id)
 
-
   if (!!cervejariaData) {
     return (
       <WrapperDefaultPadding>
@@ -19,9 +17,5 @@ export default async function CervejariaByIdPage({
         <ListaDeCervejas cervejas={cervejariaData.cervejas} />
       </WrapperDefaultPadding>
     )
-
-  }
-  else throw new Error('faltou cerveja')
+  } else throw new Error('faltou cerveja')
 }
-
-

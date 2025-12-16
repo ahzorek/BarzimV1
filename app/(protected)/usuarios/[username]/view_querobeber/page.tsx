@@ -10,13 +10,14 @@ const QueroBeber = async ({ params }: { params: { username: string } }) => {
         <ListaDeCervejas cervejas={querobeber} />
       </WrapperDefaultPadding>
     )
-  }
-  else
-  return (
-    <WrapperDefaultPadding>
-      <h1 style={{width: '100%', textAlign: 'center'}}>Parece que não há nada aqui</h1>
-    </WrapperDefaultPadding>
-  )
+  } else
+    return (
+      <WrapperDefaultPadding>
+        <h1 style={{ width: '100%', textAlign: 'center' }}>
+          Parece que não há nada aqui
+        </h1>
+      </WrapperDefaultPadding>
+    )
 }
 
 export default QueroBeber

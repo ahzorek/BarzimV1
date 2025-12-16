@@ -1,6 +1,6 @@
 'use server'
-import { CloudinaryResponse } from '@/data/data'
 import { v2 as cloudinary } from 'cloudinary'
+import { CloudinaryResponse } from '@/data/data'
 
 cloudinary.config({
   cloud_name: process.env.CLD_NAME,

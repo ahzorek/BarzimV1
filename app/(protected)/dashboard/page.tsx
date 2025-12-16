@@ -1,18 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
+
+import Link from 'next/link'
 import { auth } from '@/auth'
-import { cn, normalizeTitleCase } from '@/lib/utils'
 
 import ListFindings from '@/components/dashboard/list-where-you-find/list-where-you-find'
-import ListaCervejasDashboard from '@/components/lists/lista-cervejas-dashboard'
-import { getRandomCervejasDashboard } from '@/data/cervejas'
 import SectionTitle from '@/components/dashboard/title-sections/title-section'
-import Link from 'next/link'
-import { WrapperDefaultPadding } from '@/components/wrappers/wrapper-default-padding'
-import { getAllCervejaAvaliacoes } from '@/data/avaliacao'
+import ListaCervejasDashboard from '@/components/lists/lista-cervejas-dashboard'
 import ReviewHeader from '@/components/review/review-header/review-header'
 import RelativeDate from '@/components/titles/relative-date/relative-date'
 import { Badge } from '@/components/ui/badge'
+import { WrapperDefaultPadding } from '@/components/wrappers/wrapper-default-padding'
+import { getAllCervejaAvaliacoes } from '@/data/avaliacao'
+import { getRandomCervejasDashboard } from '@/data/cervejas'
 import { type TypeObjectCerveja } from '@/data/data'
+import { cn, normalizeTitleCase } from '@/lib/utils'
 
 export const dynamic = 'force-dynamic'
 

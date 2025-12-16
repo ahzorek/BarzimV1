@@ -1,9 +1,9 @@
 'use client'
 
-import { Fragment } from 'react'
 import { Tab } from '@headlessui/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { Fragment } from 'react'
 
 interface Tab {
   title: string
@@ -22,7 +22,7 @@ export default function UnconventionalTabs({ tabs }: { tabs: Tab[] }) {
             <Tab key={index} as={Fragment}>
               <Link style={{ display: 'contents' }} href={currPath + tab.link}>
                 <div
-                  className={`ui-focus-visible:outline-none ui-focus-visible:ring ui-focus-visible:ring-indigo-300 h-8 flex-1 whitespace-nowrap rounded-none px-4 text-center text-sm font-medium transition-colors duration-150 ease-in-out focus-visible:outline-none ${
+                  className={`ui-focus-visible:outline-none ui-focus-visible:ring ui-focus-visible:ring-indigo-300 h-8 flex-1 whitespace-nowrap rounded-none px-4 text-center text-sm font-medium transition-colors duration-150 ease-in-out focus-visible:outline-hidden ${
                     selectedIndex === index
                       ? 'border-b-2 border-yellow-barzim text-yellow-barzim'
                       : 'border-b-2 border-tabs-background text-tabs-background hover:text-slate-barzim'

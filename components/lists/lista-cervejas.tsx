@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import { BeerName } from '../titles/beer-name'
-import { CardHorizontalCerveja } from '../cards/card-horizontal-cerveja'
 import { type TypeObjectCerveja } from '@/data/data'
 import { CardCerveja } from '../cards/card-cerveja'
+import { CardHorizontalCerveja } from '../cards/card-horizontal-cerveja'
+import { BeerName } from '../titles/beer-name'
 
 const ListaDeCervejas: React.FC<{ cervejas: TypeObjectCerveja[] }> = ({
   cervejas,

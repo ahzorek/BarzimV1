@@ -1,9 +1,9 @@
+import Link from 'next/link'
+import { FaLock } from 'react-icons/fa'
 import { Logo } from '@/components/logos/logo-barzim'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { currentRole } from '@/lib/auth'
-import Link from 'next/link'
-import { FaLock } from 'react-icons/fa'
 
 const AdminLayout: React.FC<{ children: React.ReactNode }> = async ({
   children,
@@ -11,7 +11,7 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = async ({
   const role = await currentRole()
   if (role !== 'ADMIN')
     return (
-      <div className="mx-auto flex min-h-screen max-w-screen-md flex-col items-center justify-center space-y-10 px-6 text-center lg:px-10">
+      <div className="mx-auto flex min-h-screen max-w-(--breakpoint-md) flex-col items-center justify-center space-y-10 px-6 text-center lg:px-10">
         <Logo variant="auto" width={200} />
         <Card>
           <CardContent className="flex w-full flex-col items-center justify-center space-y-6 px-6 py-10 text-center">

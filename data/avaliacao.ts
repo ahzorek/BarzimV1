@@ -1,5 +1,5 @@
-import { getUserIdByUsername } from './social'
 import { db } from '@/lib/db'
+import { getUserIdByUsername } from './social'
 
 /**
  * Retorna a relação entre um usuário e uma cerveja.

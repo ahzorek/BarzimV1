@@ -1,7 +1,7 @@
 import Link from 'next/link'
+import { menuItems } from '@/content/menu-items'
 import { currentRole } from '@/lib/auth'
 import { Button } from '../ui/button'
-import { menuItems } from '@/content/menu-items'
 
 export const SideMenu = async ({ currUser }: { currUser: string }) => {
   const role = await currentRole()

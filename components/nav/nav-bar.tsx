@@ -1,21 +1,20 @@
 'use client'
 
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { useTheme } from 'next-themes'
 import { HiDotsVertical } from 'react-icons/hi'
-
+import { SignOut } from '@/actions/sign-out'
 import { Logo } from '@/components/logos/logo-barzim'
 import Notifications from '@/components/notifications/notifications'
 import {
   DropdownMenu,
-  DropdownMenuTrigger,
   DropdownMenuContent,
+  DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuItem,
+  DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { useRouter } from 'next/navigation'
-import { SignOut } from '@/actions/sign-out'
-import { useTheme } from 'next-themes'
 
 export const Nav: React.FC<{ userId: string; username: string }> = ({
   userId,
@@ -26,7 +25,7 @@ export const Nav: React.FC<{ userId: string; username: string }> = ({
 
   return (
     <div className="fixed z-50 h-[70px] w-full max-w-[100vw] border-b-2 border-black/20 bg-yellow-barzim px-6 py-4 text-deep-black shadow-sutil-shadow ">
-      <div className="mx-auto flex max-w-screen-lg items-center justify-between lg:pl-3">
+      <div className="mx-auto flex max-w-(--breakpoint-lg) items-center justify-between lg:pl-3">
         <Link href={'/dashboard'}>
           <Logo width={120} />
         </Link>

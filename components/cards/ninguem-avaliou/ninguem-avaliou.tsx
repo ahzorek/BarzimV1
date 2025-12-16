@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import imagemNinguemAvaliou from '@/public/icons/empty-list-icon.png'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import imagemNinguemAvaliou from '@/public/icons/empty-list-icon.png'
 
 interface NinguemAvaliouProps {
   cervejaId: string

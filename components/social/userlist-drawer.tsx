@@ -1,4 +1,5 @@
 'use client'
+import { useState } from 'react'
 import { useMediaQuery } from 'usehooks-ts'
 import {
   Dialog,
@@ -16,7 +17,6 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from '@/components/ui/drawer'
-import { useState } from 'react'
 import { type User } from '@/data/data'
 import { ListaDeUsuarios } from '../lists/lista-usuarios'
 import { Button } from '../ui/button'
@@ -50,7 +50,7 @@ export const UserListDrawer: React.FC<{
   return (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>{children}</DrawerTrigger>
-      <DrawerContent className="max-h-[calc(100vh-5rem)] min-h-[50vh] border-gray-cards focus-visible:outline-none">
+      <DrawerContent className="max-h-[calc(100vh-5rem)] min-h-[50vh] border-gray-cards focus-visible:outline-hidden">
         <DrawerHeader className="text-left">
           <DrawerTitle className="text-3xl">{title}</DrawerTitle>
         </DrawerHeader>

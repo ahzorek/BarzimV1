@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 import { type ChangeEvent } from 'react'
 import { FaImage } from 'react-icons/fa'
-import { Input } from '../ui/input'
 import { Button } from '../ui/button'
+import { Input } from '../ui/input'
 
 export const AddImageButton: React.FC<{
   handler: (e?: ChangeEvent<HTMLInputElement>) => void

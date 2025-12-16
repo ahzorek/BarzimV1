@@ -1,11 +1,10 @@
-import { getAllCervejas, getCervejarias } from '@/data/cervejas'
-import SectionTitle from '@/components/dashboard/title-sections/title-section'
 import CarouselWrapper from '@/components/dashboard/carousel/carousel'
 import CarouselCard from '@/components/dashboard/carousel/carousel-card/carousel-card'
-import { CarouselItem } from '@/components/ui/carousel'
-
+import SectionTitle from '@/components/dashboard/title-sections/title-section'
 import { BeerFilter } from '@/components/filters/beer-filter'
+import { CarouselItem } from '@/components/ui/carousel'
 import { WrapperDefaultPadding } from '@/components/wrappers/wrapper-default-padding'
+import { getAllCervejas, getCervejarias } from '@/data/cervejas'
 
 export const dynamic = 'force-dynamic'
 

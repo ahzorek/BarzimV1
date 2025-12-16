@@ -1,5 +1,5 @@
-import ptBrMessages from 'ra-language-pt-br'
 import polyglotI18nProvider from 'ra-i18n-polyglot'
+import ptBrMessages from 'ra-language-pt-br'
 
 const messages = { 'pt-br': ptBrMessages }
 export const localizationPtBr = polyglotI18nProvider(

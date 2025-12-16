@@ -1,12 +1,11 @@
 'use server'
 
-import * as z from 'zod'
 import bcrypt from 'bcryptjs'
-
-import { NewPasswordSchema } from '@/schemas'
+import * as z from 'zod'
 import { getPasswordResetTokenByToken } from '@/data/password-reset-token'
 import { getUserByEmail } from '@/data/user'
 import { db } from '@/lib/db'
+import { NewPasswordSchema } from '@/schemas'
 
 /**
  * Define uma nova senha para um usuário com base em um token de redefinição de senha.

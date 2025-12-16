@@ -1,15 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
-import { useImagePreview } from '@/hooks/useImagePreview'
+
 import { Label } from '@radix-ui/react-label'
 import {
   Create,
   FileInput,
   NumberInput,
   ReferenceInput,
+  required,
   SimpleForm,
   TextInput,
-  required,
 } from 'react-admin'
+import { useImagePreview } from '@/hooks/useImagePreview'
 
 export const CreateCerveja = () => {
   const { imagePreview, handleImagePreview } = useImagePreview(

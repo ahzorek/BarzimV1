@@ -1,11 +1,11 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { firstTwoLetters } from '@/lib/utils'
 import Link from 'next/link'
 import React from 'react'
-import { type User } from '@/data/data'
-import { DevBadge } from '@/components/badges/name-badges/dev-badge/dev-badge'
 import { FaSadCry } from 'react-icons/fa'
 import { ImSad } from 'react-icons/im'
+import { DevBadge } from '@/components/badges/name-badges/dev-badge/dev-badge'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { type User } from '@/data/data'
+import { firstTwoLetters } from '@/lib/utils'
 
 export const ListaDeUsuarios: React.FC<{ usuarios: User[] }> = ({
   usuarios,
@@ -34,7 +34,7 @@ export const ListaDeUsuarios: React.FC<{ usuarios: User[] }> = ({
                   {user?.name}
                   {user.role === 'ADMIN' && <DevBadge size={20} />}
                 </div>
-                <div className="break-words text-xs text-accent-foreground/60">
+                <div className="wrap-break-word text-xs text-accent-foreground/60">
                   @{user.username}
                 </div>
               </div>

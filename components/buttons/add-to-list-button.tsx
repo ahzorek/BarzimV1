@@ -1,9 +1,9 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { FaPlus } from 'react-icons/fa'
 import Popup from 'reactjs-popup'
 import { addCervejaToList } from '@/actions/userCerveja'
-import { useEffect, useState } from 'react'
 import { Button } from '../ui/button'
 
 interface TUserRelToCervea {
@@ -58,7 +58,7 @@ export const AddtoListButton: React.FC<{
       position="bottom right"
     >
       <div
-        className="z-50 flex min-w-[8rem] flex-col gap-1 overflow-hidden rounded-md border bg-accent-foreground p-2 text-accent shadow-md"
+        className="z-50 flex min-w-32 flex-col gap-1 overflow-hidden rounded-md border bg-accent-foreground p-2 text-accent shadow-md"
         role="menu"
         aria-orientation="vertical"
         aria-labelledby="options-menu"

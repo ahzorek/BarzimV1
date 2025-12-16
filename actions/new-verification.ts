@@ -1,8 +1,8 @@
 'use server'
 
-import { db } from '@/lib/db'
 import { getUserByEmail } from '@/data/user'
 import { getVerificationTokenByToken } from '@/data/verificiation-token'
+import { db } from '@/lib/db'
 
 /**
  * Marca o email de um usuário como verificado com base em um token de verificação.

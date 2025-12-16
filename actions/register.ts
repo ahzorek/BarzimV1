@@ -1,15 +1,14 @@
 'use server'
 
-import type * as z from 'zod'
 import bcrypt from 'bcryptjs'
 import { cookies as c } from 'next/headers'
-
-import { db } from '@/lib/db'
-import { RegisterSchema } from '@/schemas'
-import { getUserByEmail } from '@/data/user'
 import { generateFromEmail } from 'unique-username-generator'
+import type * as z from 'zod'
+import { getUserByEmail } from '@/data/user'
+import { db } from '@/lib/db'
 import { sendVerificationEmail } from '@/lib/mail'
 import { generateVerificationToken } from '@/lib/tokens'
+import { RegisterSchema } from '@/schemas'
 
 /**
  * Registra um novo usuário com os dados fornecidos.

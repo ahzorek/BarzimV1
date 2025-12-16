@@ -1,12 +1,11 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
+import Link from 'next/link'
 import { useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
 import { IoMdEye, IoMdEyeOff } from 'react-icons/io'
-
 import * as z from 'zod'
-
 import { register } from '@/actions/register'
 import { FormError } from '@/components/forms/form-error'
 import { FormSuccess } from '@/components/forms/form-success'
@@ -19,9 +18,8 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { RegisterSchema } from '@/schemas'
-import Link from 'next/link'
 import { cn } from '@/lib/utils'
+import { RegisterSchema } from '@/schemas'
 
 export const RegisterForm = () => {
   const [error, setError] = useState<string | undefined>('')

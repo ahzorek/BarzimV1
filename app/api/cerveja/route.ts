@@ -1,7 +1,7 @@
+import { type NextRequest, NextResponse } from 'next/server'
 import { countAllCervejas, createNewCerveja } from '@/data/cervejas'
 import { isAllowed } from '@/lib/api-admin-check'
 import { db } from '@/lib/db'
-import { type NextRequest, NextResponse } from 'next/server'
 
 /**
  * Método GET para recuperar dados de cerveja com filtragem, ordenação e paginação opcionais.

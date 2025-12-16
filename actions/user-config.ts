@@ -1,8 +1,8 @@
 'use server'
 
+import { type z } from 'zod'
 import { db } from '@/lib/db'
 import { AccountSettingsSchema } from '@/schemas'
-import { type z } from 'zod'
 
 type AccountSettingsValues = z.infer<typeof AccountSettingsSchema>
 

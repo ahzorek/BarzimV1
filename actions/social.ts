@@ -1,6 +1,6 @@
 'use server'
-import { createFollow, deleteFollow, findRelationship } from '@/data/social'
 import { revalidatePath } from 'next/cache'
+import { createFollow, deleteFollow, findRelationship } from '@/data/social'
 import { notifications } from '@/lib/notifications'
 
 /**

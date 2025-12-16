@@ -1,11 +1,13 @@
 'use client'
 
-import FileInput from '@/components/forms/file-input'
+import { useRouter } from 'next/navigation'
+import { useState } from 'react'
 import { FaRegImage } from 'react-icons/fa'
 import { IoMdClose } from 'react-icons/io'
-
+import { toast } from 'sonner'
 import { removeProfilePic } from '@/actions/profile-image'
 import AvatarReview from '@/components/avatar/avatar-review/avatar-review'
+import FileInput from '@/components/forms/file-input'
 import {
   AlertDialog,
   AlertDialogAction,
@@ -19,9 +21,6 @@ import {
 } from '@/components/ui/alert-dialog'
 import { Avatar } from '@/components/ui/avatar'
 import { type User } from '@/data/data'
-import { useState } from 'react'
-import { toast } from 'sonner'
-import { useRouter } from 'next/navigation'
 
 export const HeaderConfigsWrapper = ({ user }: { user: User }) => {
   const [profilePic, setProfilePic] = useState<string>('')
@@ -55,7 +54,7 @@ export const HeaderConfigsWrapper = ({ user }: { user: User }) => {
             height={120}
           />
         </Avatar>
-        <div className="text-foreground-accent mt-3 inline-flex items-center justify-center gap-[1px]">
+        <div className="text-foreground-accent mt-3 inline-flex items-center justify-center gap-px">
           <label className="cursor-pointer rounded-bl-md rounded-tl-md bg-accent px-4 py-3">
             <FileInput
               onProfilePicChange={handleProfilePicChange}

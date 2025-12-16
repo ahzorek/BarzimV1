@@ -1,7 +1,7 @@
 import { auth, signOut } from '@/auth'
 import { AccountSettingsForm } from '@/components/forms/account-configs-form'
-import { safeGetUserById } from '@/data/user'
 import { HeaderConfigsWrapper } from '@/components/wrappers/header-configs/header-configs-wrapper'
+import { safeGetUserById } from '@/data/user'
 
 const UserConfigs = async () => {
   const session = await auth()

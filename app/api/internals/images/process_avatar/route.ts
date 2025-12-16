@@ -1,8 +1,7 @@
+import { v2 as cloudinary, UploadApiResponse } from 'cloudinary'
 import { NextResponse } from 'next/server'
-import { v2 as cloudinary } from 'cloudinary'
-import { uploadImageToCloudinary } from '@/lib/image_upload'
-import { UploadApiResponse } from 'cloudinary'
 import streamifier from 'streamifier'
+import { uploadImageToCloudinary } from '@/lib/image_upload'
 
 cloudinary.config({
   cloud_name: process.env.CLD_NAME,

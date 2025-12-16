@@ -1,7 +1,7 @@
 import { TReview } from '@/data/data'
+import { cn } from '@/lib/utils'
 import { FeedCardImage } from './card-image'
 import { FeedCardRating } from './card-rating'
-import { cn } from '@/lib/utils'
 
 export const ListAvaliações: React.FC<{ userAvaliacoes: TReview[] }> = ({
   userAvaliacoes,

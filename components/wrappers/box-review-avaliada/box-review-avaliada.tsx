@@ -1,7 +1,7 @@
 'use client'
 
-import Confetti from 'react-confetti'
 import { useEffect, useRef, useState } from 'react'
+import Confetti from 'react-confetti'
 
 const BoxReviewAvaliada: React.FC<{
   beerName: string

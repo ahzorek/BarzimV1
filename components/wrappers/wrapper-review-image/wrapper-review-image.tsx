@@ -1,10 +1,10 @@
 import React, {
+  type ChangeEvent,
   type Dispatch,
   type SetStateAction,
-  type ChangeEvent,
 } from 'react'
-import CoposReviews from '@/components/copos/copos-review'
 import { AddImageButton } from '@/components/buttons/add-image-review-button'
+import CoposReviews from '@/components/copos/copos-review'
 import SectionTitle from '@/components/dashboard/title-sections/title-section'
 
 interface WrapperReviewImageProps {

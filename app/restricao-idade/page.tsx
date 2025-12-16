@@ -1,12 +1,12 @@
-import { Logo } from '@/components/logos/logo-barzim'
 import Link from 'next/link'
 import { GoArrowLeft } from 'react-icons/go'
+import { Logo } from '@/components/logos/logo-barzim'
 import { Button } from '@/components/ui/button'
 
 export default async function RestricaoIdade() {
   return (
     <div className="w-full bg-accent text-accent-foreground">
-      <div className="mx-auto grid min-h-screen max-w-screen-sm place-content-center space-y-10 px-6 py-10">
+      <div className="mx-auto grid min-h-screen max-w-(--breakpoint-sm) place-content-center space-y-10 px-6 py-10">
         <Logo width={200} variant="auto" />
         <div className="space-y-4">
           <h1 className="mb-4 text-2xl font-medium">Restrição de Idade</h1>

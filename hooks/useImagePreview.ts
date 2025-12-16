@@ -1,6 +1,6 @@
-import { convertFileToBase64, readFileAsArrayBuffer } from '@/lib/utils'
 import { useState } from 'react'
 import { toast } from 'sonner'
+import { convertFileToBase64, readFileAsArrayBuffer } from '@/lib/utils'
 
 /**
  * Gera um hook para lidar com a visualização de imagem com um limite máximo de tamanho.

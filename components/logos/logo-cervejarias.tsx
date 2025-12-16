@@ -11,7 +11,7 @@ export const LogoCervejaria: React.FC<{ src: string | null; alt?: string }> = ({
         width={80}
         height={80}
         alt={alt + ' no Barzim'}
-        className="object-cover [filter:_var(--logo-filter)]"
+        className="object-cover filter-(--logo-filter)"
       ></Image>
     )
   } else return ''

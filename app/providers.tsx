@@ -1,8 +1,8 @@
 'use client'
-import { ThemeProvider } from '@/components/theme-provider'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
+import { ThemeProvider } from '@/components/theme-provider'
 
 const PostHogPageView = dynamic(() => import('./PostHogPageView'))
 

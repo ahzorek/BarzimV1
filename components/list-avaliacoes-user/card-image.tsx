@@ -1,9 +1,9 @@
-import { type TReview } from '@/data/data'
-import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
-import RelativeDate from '../titles/relative-date/relative-date'
+import { type TReview } from '@/data/data'
+import { cn } from '@/lib/utils'
 import { StarReviews } from '../stars/stars-reviews'
+import RelativeDate from '../titles/relative-date/relative-date'
 
 export const FeedCardImage: React.FC<{ avaliacao: TReview }> = ({
   avaliacao,

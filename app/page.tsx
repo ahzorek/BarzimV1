@@ -1,10 +1,10 @@
-import { Logo } from '@/components/logos/logo-barzim'
-import styles from './page.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { Logo } from '@/components/logos/logo-barzim'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+import styles from './page.module.css'
 
 const Home: React.FC = () => {
   return (

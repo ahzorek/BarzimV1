@@ -1,15 +1,15 @@
 'use client'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
-import ImageSlotsWrapper from '../review/review-image/imageSlotsWrapper'
-import WrapperReviewImage from '../wrappers/wrapper-review-image/wrapper-review-image'
-import SendReviewButton from '../buttons/send-review-button/send-review-button'
+import { BeatLoader } from 'react-spinners'
+import { addReviewV2 } from '@/actions/add-review-v2'
 import { uploadReviewImage } from '@/actions/upload-image'
 import { type CloudinaryResponse } from '@/data/data'
-import { useRouter } from 'next/navigation'
-import { addReviewV2 } from '@/actions/add-review-v2'
-import { Textarea } from '../ui/textarea'
-import { BeatLoader } from 'react-spinners'
+import SendReviewButton from '../buttons/send-review-button/send-review-button'
 import SectionTitle from '../dashboard/title-sections/title-section'
+import ImageSlotsWrapper from '../review/review-image/imageSlotsWrapper'
+import { Textarea } from '../ui/textarea'
+import WrapperReviewImage from '../wrappers/wrapper-review-image/wrapper-review-image'
 
 const MAX_FILE_SIZE = 300 * 1024
 
@@ -115,7 +115,7 @@ export const AvaliacaoForm: React.FC<{
         />
         <SendReviewButton isSubmitting={isSubmitting} onClick={handleSubmit} />
         {error && (
-          <p className="border-1 mt-2 w-full rounded-sm border-solid border-red-700 bg-destructive p-4 text-white">
+          <p className="border mt-2 w-full rounded-sm border-solid border-red-700 bg-destructive p-4 text-white">
             {error}
           </p>
         )}

@@ -1,12 +1,12 @@
+import Link from 'next/link'
 import { FaLock } from 'react-icons/fa'
 import { Logo } from '../logos/logo-barzim'
-import { Card, CardContent } from '../ui/card'
 import { Button } from '../ui/button'
-import Link from 'next/link'
+import { Card, CardContent } from '../ui/card'
 
 export const NaoAutorizado = () => {
   return (
-    <div className="mx-auto flex min-h-screen max-w-screen-md flex-col items-center justify-center space-y-10 px-6 text-center lg:px-10">
+    <div className="mx-auto flex min-h-screen max-w-(--breakpoint-md) flex-col items-center justify-center space-y-10 px-6 text-center lg:px-10">
       <Logo variant="auto" width={200} />
       <Card>
         <CardContent className="flex w-full flex-col items-center justify-center space-y-6 px-6 py-10 text-center">

@@ -1,5 +1,5 @@
-import { getCervejarias } from '@/data/cervejas'
 import Link from 'next/link'
+import { getCervejarias } from '@/data/cervejas'
 
 export default async function CervejariasPage() {
   const cervejarias = await getCervejarias()

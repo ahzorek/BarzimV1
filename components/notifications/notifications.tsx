@@ -2,13 +2,13 @@
 import '@knocklabs/react/dist/index.css'
 
 import {
-  KnockProvider,
   KnockFeedProvider,
-  NotificationIconButton,
+  KnockProvider,
   NotificationFeedPopover,
+  NotificationIconButton,
 } from '@knocklabs/react'
 
-import { useState, useRef } from 'react'
+import { useRef, useState } from 'react'
 
 const Notifications: React.FC<{ userId: string }> = ({ userId }) => {
   const [isVisible, setIsVisible] = useState(false)

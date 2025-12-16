@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState } from 'react'
 import { IoSearchSharp } from 'react-icons/io5'
-import { ListaDeUsuarios } from '../lists/lista-usuarios'
 import { type User } from '@/data/data'
+import { ListaDeUsuarios } from '../lists/lista-usuarios'
 import { Input } from '../ui/input'
 import { WrapperDefaultPadding } from '../wrappers/wrapper-default-padding'
 

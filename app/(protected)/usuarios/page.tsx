@@ -1,6 +1,6 @@
 import { auth } from '@/auth'
-import { getManyUsersNotPrivate } from '@/data/user'
 import { UserFilter } from '@/components/filters/user-filter'
+import { getManyUsersNotPrivate } from '@/data/user'
 
 // Função assíncrona para renderizar a página de exploração de usuários
 const ExploreUsersPage = async () => {

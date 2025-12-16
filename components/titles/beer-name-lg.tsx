@@ -1,5 +1,5 @@
 import { normalizeTitleCase } from '@/lib/utils'
-import { getThemeByVariant, type BeerProps } from './beer-name'
+import { type BeerProps, getThemeByVariant } from './beer-name'
 
 export const BeerNameLarge: React.FC<BeerProps> = ({ cerveja, variant }) => {
   const { nomeCerveja, tipoCerveja } = cerveja

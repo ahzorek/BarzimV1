@@ -11,9 +11,9 @@ export default function TermsOfService() {
           <span className="text-blue-500 hover:underline">Barzim</span>
         </Link>
         , concorda em cumprir estes termos de serviço, todas as leis e
-        regulamentos aplicáveis ​​e concorda que é responsável pelo cumprimento
-        de todas as leis locais aplicáveis. Se você não concordar com algum
-        desses termos, está proibido de usar ou acessar este site. Os materiais
+        regulamentos aplicáveis ​​e concorda que é responsável pelo cumprimento de
+        todas as leis locais aplicáveis. Se você não concordar com algum desses
+        termos, está proibido de usar ou acessar este site. Os materiais
         contidos neste site são protegidos pelas leis de direitos autorais e
         marcas comerciais aplicáveis.
       </p>

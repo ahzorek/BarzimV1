@@ -1,17 +1,16 @@
 'use server'
 
-import type * as z from 'zod'
 import { AuthError } from 'next-auth'
-
-import { db } from '@/lib/db'
+import type * as z from 'zod'
 import { signIn } from '@/auth'
-import { LoginSchema } from '@/schemas'
-import { getUserByEmail } from '@/data/user'
-import { getTwoFactorTokenByEmail } from '@/data/two-factor-token'
-import { sendVerificationEmail, sendTwoFactorTokenEmail } from '@/lib/mail'
-import { DEFAULT_LOGIN_REDIRECT } from '@/routes'
-import { generateVerificationToken, generateTwoFactorToken } from '@/lib/tokens'
 import { getTwoFactorConfirmationByUserId } from '@/data/two-factor-confirmation'
+import { getTwoFactorTokenByEmail } from '@/data/two-factor-token'
+import { getUserByEmail } from '@/data/user'
+import { db } from '@/lib/db'
+import { sendTwoFactorTokenEmail, sendVerificationEmail } from '@/lib/mail'
+import { generateTwoFactorToken, generateVerificationToken } from '@/lib/tokens'
+import { DEFAULT_LOGIN_REDIRECT } from '@/routes'
+import { LoginSchema } from '@/schemas'
 
 /**
  * Efetua o processo de login de um usuário.

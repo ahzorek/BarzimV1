@@ -1,9 +1,9 @@
 'use server'
 import type * as z from 'zod'
-import { ResetSchema } from '@/schemas'
 import { getUserByEmail } from '@/data/user'
 import { sendPasswordResetEmail } from '@/lib/mail'
 import { generatePasswordResetToken } from '@/lib/tokens'
+import { ResetSchema } from '@/schemas'
 
 /**
  * Envia um email para redefinição de senha para o usuário com o email fornecido.

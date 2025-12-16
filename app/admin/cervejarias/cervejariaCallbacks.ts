@@ -1,6 +1,6 @@
+import { type DataProvider } from 'react-admin'
 import { uploadImageToCloudinary_v2 } from '@/lib/image_upload'
 import { convertRawFileToBase64 } from '@/lib/utils'
-import { type DataProvider } from 'react-admin'
 
 export const cervejariaCallbacks = {
   resource: 'cervejaria',

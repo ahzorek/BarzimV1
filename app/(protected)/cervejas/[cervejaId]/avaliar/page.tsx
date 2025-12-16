@@ -1,10 +1,10 @@
+import { redirect } from 'next/navigation'
 import { auth } from '@/auth'
 import { AvaliacaoForm } from '@/components/forms/add-review-form'
 import ReviewTitle from '@/components/titles/review-title/review-title'
 import { WrapperDefaultPadding } from '@/components/wrappers/wrapper-default-padding'
 import { relUserCerv, userHasReviewedCervejaById } from '@/data/avaliacao'
 import { getCervejaById } from '@/data/cervejas'
-import { redirect } from 'next/navigation'
 
 const AvaliarCerveja = async ({
   params,
@@ -24,7 +24,6 @@ const AvaliarCerveja = async ({
     params.cervejaId,
     myId
   )
-
 
   if (!!userHasReviewed) redirect(`/cervejas/${params.cervejaId}/avaliou`)
   else

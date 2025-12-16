@@ -1,6 +1,6 @@
-import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
+import { cn } from '@/lib/utils'
 import { PHProvider } from './ph_providers'
 import { Providers } from './providers'
 import '@/styles/globals.css'

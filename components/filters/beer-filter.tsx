@@ -1,5 +1,9 @@
 'use client'
 
+import React, { useEffect, useState } from 'react'
+import { FaFilter, FaSort } from 'react-icons/fa'
+import { GoSortAsc, GoSortDesc } from 'react-icons/go'
+import { IoSearchSharp } from 'react-icons/io5'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
@@ -7,14 +11,10 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import React, { useEffect, useState } from 'react'
-import ListaDeCervejas from '../lists/lista-cervejas'
 import { type TypeObjectCerveja } from '@/data/data'
-import { WrapperDefaultPadding } from '../wrappers/wrapper-default-padding'
-import { IoSearchSharp } from 'react-icons/io5'
-import { FaSort, FaFilter } from 'react-icons/fa'
-import { GoSortDesc, GoSortAsc } from 'react-icons/go'
+import ListaDeCervejas from '../lists/lista-cervejas'
 import { Input } from '../ui/input'
+import { WrapperDefaultPadding } from '../wrappers/wrapper-default-padding'
 
 export const BeerFilter: React.FC<{ cervejas: TypeObjectCerveja[] }> = ({
   cervejas,

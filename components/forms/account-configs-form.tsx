@@ -1,5 +1,9 @@
 'use client'
 
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useState, useTransition } from 'react'
+import { useForm } from 'react-hook-form'
+import type * as z from 'zod'
 import { updateAccountSettings } from '@/actions/user-config'
 import { FormError } from '@/components/forms/form-error'
 import { FormSuccess } from '@/components/forms/form-success'
@@ -15,10 +19,6 @@ import {
 import { Input } from '@/components/ui/input'
 import { type User } from '@/data/data'
 import { AccountSettingsSchema } from '@/schemas'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useState, useTransition } from 'react'
-import { useForm } from 'react-hook-form'
-import type * as z from 'zod'
 
 export const AccountSettingsForm: React.FC<{ user: User }> = ({ user }) => {
   const [error, setError] = useState<string | undefined>('')

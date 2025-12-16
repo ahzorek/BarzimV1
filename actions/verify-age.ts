@@ -1,8 +1,8 @@
 'use server'
 
-import { type AgeVerifFormData } from '@/data/data'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
+import { type AgeVerifFormData } from '@/data/data'
 
 /**
  * Calcula a idade com base na data de nascimento fornecida.

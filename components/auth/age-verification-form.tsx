@@ -1,9 +1,10 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
+import { type ChangeEvent, useRef } from 'react'
 import { useForm } from 'react-hook-form'
-
 import verifyAge from '@/actions/verify-age'
+import { Button } from '@/components/ui/button'
 import {
   Form,
   FormControl,
@@ -12,11 +13,8 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { AgeVerificationSchema } from '@/schemas'
-
-import { Button } from '@/components/ui/button'
 import { type AgeVerifFormData } from '@/data/data'
-import { useRef, type ChangeEvent } from 'react'
+import { AgeVerificationSchema } from '@/schemas'
 
 export const AgeVerificationForm = () => {
   const form = useForm({

@@ -1,6 +1,6 @@
+import Link from 'next/link'
 import { menuItems } from '@/content/menu-items'
 import { currentRole } from '@/lib/auth'
-import Link from 'next/link'
 
 export const BottomMenu = async ({ currUser }: { currUser: string }) => {
   const textSize = { fontSize: '10px' }

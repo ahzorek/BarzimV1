@@ -1,11 +1,11 @@
-import NextAuth from 'next-auth'
 import { cookies } from 'next/headers'
+import NextAuth from 'next-auth'
 
 import authConfig from '@/auth.config'
 import {
-  DEFAULT_LOGIN_REDIRECT,
   apiAuthPrefix,
   authRoutes,
+  DEFAULT_LOGIN_REDIRECT,
   publicRoutes,
 } from '@/routes'
 

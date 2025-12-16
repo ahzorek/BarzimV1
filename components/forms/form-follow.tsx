@@ -1,8 +1,8 @@
 'use client'
-import { handleRelationship } from '@/actions/social'
 import { useState } from 'react'
 import { IoMdPersonAdd } from 'react-icons/io'
 import { IoPersonRemove } from 'react-icons/io5'
+import { handleRelationship } from '@/actions/social'
 import { Button } from '../ui/button'
 
 /**

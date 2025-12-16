@@ -1,7 +1,7 @@
+import { NextResponse } from 'next/server'
 import { getTiposDeCerveja } from '@/data/cervejas'
 import { isAllowed } from '@/lib/api-admin-check'
 import { db } from '@/lib/db'
-import { NextResponse } from 'next/server'
 
 export const GET = async () => {
   if (!(await isAllowed())) {

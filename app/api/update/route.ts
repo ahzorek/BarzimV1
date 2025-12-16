@@ -1,5 +1,5 @@
-import { calculateAverageRatingForBeers } from '@/data/average-rating'
 import { NextResponse } from 'next/server'
+import { calculateAverageRatingForBeers } from '@/data/average-rating'
 
 export const GET = async (req: Request) => {
   try {

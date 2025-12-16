@@ -5,8 +5,8 @@ import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
+import { IoMdEye, IoMdEyeOff } from 'react-icons/io'
 import * as z from 'zod'
-
 import { login } from '@/actions/login'
 import { FormError } from '@/components/forms/form-error'
 import { FormSuccess } from '@/components/forms/form-success'
@@ -20,9 +20,8 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { LoginSchema } from '@/schemas'
 import { cn } from '@/lib/utils'
-import { IoMdEye, IoMdEyeOff } from 'react-icons/io'
+import { LoginSchema } from '@/schemas'
 
 export const LoginForm = () => {
   const searchParams = useSearchParams()

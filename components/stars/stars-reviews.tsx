@@ -1,5 +1,5 @@
-import { cn } from '@/lib/utils'
 import { TbBeer, TbBeerFilled } from 'react-icons/tb'
+import { cn } from '@/lib/utils'
 
 interface StarReviewsProps {
   nota: number

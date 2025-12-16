@@ -1,6 +1,6 @@
-import { cn } from '@/lib/utils'
 import { formatDistanceToNowStrict } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
+import { cn } from '@/lib/utils'
 
 const RelativeDate: React.FC<{ date: Date; className?: string }> = ({
   date,

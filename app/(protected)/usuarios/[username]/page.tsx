@@ -1,10 +1,10 @@
 import CarouselWrapper from '@/components/dashboard/carousel/carousel'
 import CarouselCard from '@/components/dashboard/carousel/carousel-card/carousel-card'
+import { ListAvaliações } from '@/components/list-avaliacoes-user/list-view'
 import { CarouselItem } from '@/components/ui/carousel'
 import { WrapperDefaultPadding } from '@/components/wrappers/wrapper-default-padding'
 import { getAvaliacoesByUser } from '@/data/avaliacao'
 import { getUserReviewPics } from '@/data/user'
-import { ListAvaliações } from '@/components/list-avaliacoes-user/list-view'
 
 const UserPage = async ({ params }: { params: { username: string } }) => {
   const userPics = await getUserReviewPics(params.username)

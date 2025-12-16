@@ -15,7 +15,7 @@ const CarouselWrapper = ({
     <div
       className={cn(
         'overflow-x-hidden px-6 pb-4 pt-0',
-        logoCarousel && '[filter:_var(--logo-filter)]'
+        logoCarousel && 'filter-(--logo-filter)'
       )}
     >
       <Carousel

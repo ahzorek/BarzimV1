@@ -1,8 +1,8 @@
+import Link from 'next/link'
 import { type TReview } from '@/data/data'
 import { cn } from '@/lib/utils'
-import Link from 'next/link'
-import RelativeDate from '../titles/relative-date/relative-date'
 import { StarReviews } from '../stars/stars-reviews'
+import RelativeDate from '../titles/relative-date/relative-date'
 
 export const FeedCardRating: React.FC<{ avaliacao: TReview }> = ({
   avaliacao,

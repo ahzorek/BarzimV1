@@ -1,5 +1,3 @@
-import { Label } from '@/components/ui/label'
-import { useImagePreview } from '@/hooks/useImagePreview'
 import Image from 'next/image'
 import {
   DateInput,
@@ -9,6 +7,8 @@ import {
   SimpleForm,
   TextInput,
 } from 'react-admin'
+import { Label } from '@/components/ui/label'
+import { useImagePreview } from '@/hooks/useImagePreview'
 
 export const CervejariasEdit = () => {
   const { imagePreview, handleImagePreview } = useImagePreview()

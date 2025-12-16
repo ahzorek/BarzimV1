@@ -1,5 +1,5 @@
-import { cn, haMenosDeDuasSemanas } from '@/lib/utils'
 import Image from 'next/image'
+import { cn, haMenosDeDuasSemanas } from '@/lib/utils'
 import { Novidade } from '../badges/card-badges/novidade'
 
 interface TCardCervejaProps {
@@ -20,7 +20,7 @@ export const CardCerveja: React.FC<TCardCervejaProps> = ({
   const novidade = haMenosDeDuasSemanas(createdAt)
 
   return (
-    <div className="group h-full cursor-pointer overflow-hidden rounded-lg border-[1px] border-stroke-cervejas">
+    <div className="group h-full cursor-pointer overflow-hidden rounded-lg border border-stroke-cervejas">
       <div
         className={cn(
           'h-30 relative m-0 flex w-full items-center gap-2 p-0',

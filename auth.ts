@@ -1,13 +1,12 @@
-import NextAuth from 'next-auth'
-import { type UserRole } from '@prisma/client'
 import { PrismaAdapter } from '@auth/prisma-adapter'
+import { type UserRole } from '@prisma/client'
 import { cookies as c } from 'next/headers'
-
-import { db } from '@/lib/db'
-import authConfig from '@/auth.config'
-import { getUserById } from '@/data/user'
-import { getTwoFactorConfirmationByUserId } from '@/data/two-factor-confirmation'
+import NextAuth from 'next-auth'
 import { generateFromEmail, generateUsername } from 'unique-username-generator'
+import authConfig from '@/auth.config'
+import { getTwoFactorConfirmationByUserId } from '@/data/two-factor-confirmation'
+import { getUserById } from '@/data/user'
+import { db } from '@/lib/db'
 
 export const {
   handlers: { GET, POST },

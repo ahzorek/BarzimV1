@@ -1,44 +1,37 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 
+import simpleRestProvider from 'ra-data-simple-rest'
 import {
   Admin,
+  defaultDarkTheme,
   EditGuesser,
   //ListGuesser,
   Resource,
   ShowGuesser,
   withLifecycleCallbacks,
-  defaultDarkTheme,
 } from 'react-admin'
-import simpleRestProvider from 'ra-data-simple-rest'
-import { localizationPtBr } from './i18n'
-
+import { BiSolidUserPin } from 'react-icons/bi'
+import { FaUser, FaUserEdit } from 'react-icons/fa'
 import { LuHop } from 'react-icons/lu'
 import { PiBeerBottleDuotone, PiFactoryDuotone } from 'react-icons/pi'
-import { FaUser, FaUserEdit } from 'react-icons/fa'
-import { BiSolidUserPin } from 'react-icons/bi'
-
-import { TipoCervejaList } from './tipocerveja/list'
-import { CervejariaList } from './cervejarias/list'
-import { CervejaList } from './cervejas/list'
-
-import { UserList } from './users/list'
-import { UserCervejaList } from './userCerveja/list'
-
-import { TipoCervejaEdit } from './tipocerveja/edit'
-import { CervejariasEdit } from './cervejarias/edit'
-import { CervejaEdit } from './cervejas/edit'
-
-import { TipoCervejaShow } from './tipocerveja/show'
-import { CervejariaShow } from './cervejarias/show'
-import { CervejaShow } from './cervejas/show'
-
-import { CreateTipoCerveja } from './tipocerveja/create'
-import { CreateCervejaria } from './cervejarias/create'
-import { CreateCerveja } from './cervejas/create'
-
 import { cervejariaCallbacks } from './cervejarias/cervejariaCallbacks'
+import { CreateCervejaria } from './cervejarias/create'
+import { CervejariasEdit } from './cervejarias/edit'
+import { CervejariaList } from './cervejarias/list'
+import { CervejariaShow } from './cervejarias/show'
 import { cervejasCallbacks } from './cervejas/cervejasCallbacks'
+import { CreateCerveja } from './cervejas/create'
+import { CervejaEdit } from './cervejas/edit'
+import { CervejaList } from './cervejas/list'
+import { CervejaShow } from './cervejas/show'
+import { localizationPtBr } from './i18n'
+import { CreateTipoCerveja } from './tipocerveja/create'
+import { TipoCervejaEdit } from './tipocerveja/edit'
+import { TipoCervejaList } from './tipocerveja/list'
+import { TipoCervejaShow } from './tipocerveja/show'
+import { UserCervejaList } from './userCerveja/list'
+import { UserList } from './users/list'
 
 const dataProvider = withLifecycleCallbacks(simpleRestProvider('/api'), [
   cervejariaCallbacks,

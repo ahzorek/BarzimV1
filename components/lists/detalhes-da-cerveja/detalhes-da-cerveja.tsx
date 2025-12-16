@@ -1,5 +1,5 @@
-import { type TypeObjectCerveja, type CervejaDetails } from '@/data/data'
 import SectionTitle from '@/components/dashboard/title-sections/title-section'
+import { type CervejaDetails, type TypeObjectCerveja } from '@/data/data'
 
 const DetalhesCerveja: React.FC<{ cerveja: TypeObjectCerveja }> = ({
   cerveja,

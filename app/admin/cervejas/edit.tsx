@@ -1,4 +1,3 @@
-import { useImagePreview } from '@/hooks/useImagePreview'
 import { Label } from '@radix-ui/react-label'
 import Image from 'next/image'
 import {
@@ -8,10 +7,11 @@ import {
   ImageField,
   NumberInput,
   ReferenceInput,
+  required,
   SimpleForm,
   TextInput,
-  required,
 } from 'react-admin'
+import { useImagePreview } from '@/hooks/useImagePreview'
 
 export const CervejaEdit = () => {
   const { imagePreview, handleImagePreview } = useImagePreview(

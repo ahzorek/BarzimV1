@@ -1,5 +1,3 @@
-import { type CervejaBreadcrumbs } from '@/data/data'
-
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -8,6 +6,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
+import { type CervejaBreadcrumbs } from '@/data/data'
 
 export const BreadcrumbsCerveja: React.FC<{ cerveja: CervejaBreadcrumbs }> = ({
   cerveja,

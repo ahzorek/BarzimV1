@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import FollowForm from '../forms/form-follow'
 import React from 'react'
 import { MdSettings } from 'react-icons/md'
+import FollowForm from '../forms/form-follow'
 import { Button } from '../ui/button'
 
 enum SocialLabels {
