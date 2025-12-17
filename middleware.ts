@@ -12,33 +12,23 @@ import {
 const { auth } = NextAuth(authConfig)
 
 export default auth(async (req) => {
-  //console.log('REQ Auth Passando pelo Middleware contem session ::::', req.auth)
-
   const { nextUrl } = req
   const isLoggedIn = !!req.auth
 
   const isApiAuthRoute = nextUrl.pathname.startsWith(apiAuthPrefix)
   const isPublicRoute = publicRoutes.includes(nextUrl.pathname)
   const isAuthRoute = authRoutes.includes(nextUrl.pathname)
-  const isAgeCheckRoute = nextUrl.pathname == '/auth/age-verification'
-  const isRestricaoRoute = nextUrl.pathname == '/restricao-idade'
-  const isOBarzimRedirect = nextUrl.pathname == '/obarzim'
 
   const cookieStore = await cookies()
-  const dob = cookieStore.get('dateOfBirth')
-  const isDob = !!dob
+  const isDob = !!cookieStore.get('dateOfBirth')
 
   if (isApiAuthRoute) {
     return null
   }
 
-  if (isOBarzimRedirect) {
-    return Response.redirect('https://dev.barzim.tech/')
-  }
-
   if (
-    (!isDob && isAgeCheckRoute) ||
-    (!isDob && isRestricaoRoute) ||
+    (!isDob && (nextUrl.pathname == '/auth/age-verification')) ||
+    (!isDob && (nextUrl.pathname == '/restricao-idade')) ||
     (!isDob && isLoggedIn)
   ) {
     return null
@@ -48,7 +38,7 @@ export default auth(async (req) => {
     return Response.redirect(new URL('/auth/age-verification', nextUrl))
   }
 
-  if (isAgeCheckRoute && isDob) {
+  if ((nextUrl.pathname == '/auth/age-verification') && isDob) {
     return Response.redirect(new URL('/', nextUrl))
   }
 
@@ -68,5 +58,5 @@ export default auth(async (req) => {
 
 // opcionalmente não chama o middleware nesses caminhos abaixo
 export const config = {
-  matcher: ['/((?!.+\\.[\\w]+$|_next).*)', '/', '/(api|trpc)(.*)'],
+  matcher: ['/((?!.+\\.[\\w]+$|_next).*)', '/', '/(api)(.*)'],
 }
